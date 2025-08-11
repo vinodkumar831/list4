@@ -1,0 +1,194 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  margin: 0;
+
+  /* Animation */
+  animation: blinkGradient 20s infinite alternate;
+}
+
+@keyframes blinkGradient {
+  0% {
+    background: linear-gradient(135deg, #0a0808, #1a1a1a);
+  }
+ 
+  10% {
+      background: linear-gradient(135deg, #443d3d, #886421);
+    }
+    20% {
+      background: linear-gradient(135deg, #ff0000, #b4eb33);
+    }
+    30% {
+      background: linear-gradient(135deg, #19c243, #ffa500);
+    }
+    40% {
+      background: linear-gradient(135deg, #e40b5e, #650bf5);
+    }
+    50% {
+      background: linear-gradient(135deg, #0b93ee, #0c8d2c);
+    }
+    60% {
+      background: linear-gradient(135deg, #bcc0b97c, #5308a8);
+    }
+    70% {
+      background: linear-gradient(135deg, #a51515, #0e1401);
+    }
+    80% {
+      background: linear-gradient(135deg, #c5b5b505, #3ea70e);
+    }
+    90% {
+      background: linear-gradient(135deg, #610428, #d18c0a);
+    }
+}
+
+.robot {
+  position: relative;
+  width: 120px;
+  height: 260px;
+}
+
+.head {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  background: #ffcc00;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: nod 2s infinite;
+}
+
+.eye {
+  position: absolute;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  background: rgb(26, 22, 22);
+  border-radius: 50%;
+}
+.eye.left { left: 20px; }
+.eye.right { right: 20px; }
+
+.mouth {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  width: 24px;
+  height: 8px;
+  background: #222;
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+.tongue {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  width: 24px;
+  height: 8px;
+  background: rgb(238, 30, 30);
+  border-radius: 10px;
+  transform: translateX(-50%);
+}
+
+.body {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  background: #0099ff;
+  border-radius: 15px;
+}
+
+.arm {
+  position: absolute;
+  top: 95px;
+  width: 24px;
+  height: 60px;
+  background: #ffcc00;
+  border-radius: 14px;
+  animation: wave 1s infinite alternate;
+}
+.arm.left { left: -18px; transform-origin: top right; }
+.arm.right { right: -18px; transform-origin: top left; animation-delay: 0.5s; }
+
+.leg {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 80px;
+  background: #0099ff;
+  border-radius: 12px;
+  animation: dance 1s infinite alternate;
+}
+.leg.left { left: 22px; }
+.leg.right { right: 22px; }
+
+@keyframes nod {
+  0%, 100% { transform: rotate(0deg);}
+  50% { transform: rotate(10deg);}
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg);}
+  50% { transform: rotate(360deg);}
+}
+
+@keyframes dance {
+  0%, 100% { transform: rotate(180deg);}
+  50% { transform: rotate(-315deg);}
+}
+
+
+@keyframes nod {
+from {background-color: rgb(129, 233, 32);}
+to {background-color: rgb(226, 33, 42);}
+to {background-color: gold;}
+}
+h1 {
+  height: 1000px;
+  width: 1000px;
+  background-color: black;
+  color: white;
+}
+
+div {
+  background-color: rgb(219, 28, 155);
+  color: white;
+}
+body {
+  background: #0a0808;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* Animation */
+  animation: blinkBackground 1s infinite alternate;
+}
+
+/* Keyframes for blinking */
+@keyframes blinkBackground {
+  20% {
+    background-color: #0a0808;
+  }
+  100% {
+    background-color: #d2df27; /* Change to any color you want */
+  }
+  10% {
+      background-color: #11bd5e; /* Change to any color you want */
+    }
+    100% {
+      background-color: indigo;/* Change to any color you want */
+    }
+}
+
+#h{
+    margin-bottom: 50px;
+}
